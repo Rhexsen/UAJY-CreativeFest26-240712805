@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Pendaftaran Peserta | UAJY Creative Fest 2026</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+    </head>
+
+    <body>
+        <!-- header -->
+        <header class="site-header">
+            <div class="container">
+                <a href="index.xhtml" class="brand">
+                    <img src="images/Logo UAJY.png" alt="Logo UAJY" class="logo" />
+                    <span class="brand-text">
+                        <span class="brand-name">Creative Fest</span>
+                        <span class="brand-sub">UAJY 2026</span>
+                    </span>
+                </a>
+                <button id="nav-toggle" type="button" aria-label="Buka menu navigasi">&#9776;</button>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.xhtml">Beranda</a></li>
+                        <li><a href="schedule.xhtml">Jadwal</a></li>
+                        <li><a href="registration.xhtml" class="active">Pendaftaran</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <section class="hero" style="padding:52px 0;">
+            <div class="container" style="grid-template-columns:1fr;">
+                <div class="hero-text">
+                    <span class="hero-eyebrow">Formulir Resmi</span>
+                    <h1>Daftar <span>Sekarang</span></h1>
+                    <p class="tagline">Satu langkah menuju panggung kreativitasmu.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+
+                <div class="form-wrapper reveal">
+
+                    <!-- form panel -->
+                    <div class="form-panel">
+
+                        <div id="formFeedback"></div>
+
+                        <p style="font-size:14px;color:var(--muted);">
+                            Peserta terdaftar saat ini:
+                            <strong id="liveCounterInline">&#8211;</strong>
+                            &#8226; Pendaftaran ditutup 9 September 2026, 23.59 WIB.
+                        </p>
+
+                        <form id="registrationForm" action="php/process_registration.php" method="post" novalidate="novalidate">
+
+                            <div class="field-group" id="group-fullname">
+                                <label for="fullname">Nama Lengkap</label>
+                                <input type="text" id="fullname" name="fullname" placeholder="Contoh: Bernadeta Aurelia" />
+                                <span class="error-message">Nama lengkap wajib diisi.</span>
+                            </div>
+
+                            <div class="field-group" id="group-npm">
+                                <label for="npm">NPM / Nomor Induk Mahasiswa</label>
+                                <input type="text" id="npm" name="npm" placeholder="Contoh: 210708000" />
+                                <span class="error-message">NPM wajib diisi dan hanya boleh berupa angka.</span>
+                            </div>
+
+                            <div class="field-group" id="group-email">
+                                <label for="email">Alamat Email</label>
+                                <input type="email" id="email" name="email" placeholder="email@gmail.com" />
+                                <span class="error-message">Format email tidak valid.</span>
+                            </div>
+
+                            <div class="field-group" id="group-phone">
+                                <label for="phone">Nomor HP / WhatsApp</label>
+                                <input type="tel" id="phone" name="phone" placeholder="08xxxxxxxxxx" />
+                                <span class="error-message">Nomor HP wajib diisi, 10&#8211;14 digit angka.</span>
+                            </div>
+
+                            <div class="field-group" id="group-category">
+                                <label for="category">Kategori Kompetisi</label>
+                                <select id="category" name="category">
+                                    <option value="">-- Pilih kategori --</option>
+                                    <option value="Digital Poster Competition">Digital Poster Competition</option>
+                                    <option value="Campus Photography Competition">Campus Photography Competition</option>
+                                    <option value="Short Video Competition">Short Video Competition</option>
+                                    <option value="UI/UX Design Competition">UI/UX Design Competition</option>
+                                </select>
+                                <span class="error-message">Silakan pilih salah satu kategori.</span>
+                            </div>
+
+                            <div class="field-group" id="group-teamname">
+                                <label for="teamname">Nama Tim (opsional, kosongkan jika individu)</label>
+                                <input type="text" id="teamname" name="teamname" placeholder="Contoh: Studio Kreasi" />
+                            </div>
+
+                            <div class="field-group" id="group-motivation">
+                                <label for="motivation">Asal Universitas</label>
+                                <input type="text" id="motivation" name="motivation" placeholder="Contoh: Universitas Atma Jaya Yogyakarta"/>
+                                <span class="error-message">Asal universitas wajib diisi.</span>
+                            </div>
+
+                            <div class="field-group" id="group-terms">
+                                <label class="checkbox-row" for="terms">
+                                    <input type="checkbox" id="terms" name="terms" value="setuju" />
+                                    <span>Saya menyatakan bahwa data yang saya isi benar dan bersedia mengikuti seluruh ketentuan UAJY Creative Fest 2026.</span>
+                                </label>
+                                <span class="error-message">Kamu harus menyetujui pernyataan ini untuk mendaftar.</span>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary" id="submitBtn">Kirim Pendaftaran</button>
+                        </form>
+                    </div>
+
+                    <!-- side info panel -->
+                    <div class="form-side">
+                        <h3>Sebelum Mendaftar</h3>
+                        <ul>
+                            <li>Pendaftaran ini gratis untuk seluruh mahasiswa.</li>
+                            <li>Satu peserta hanya dapat memilih satu kategori kompetisi.</li>
+                            <li>Karya dikumpulkan melalui tautan yang akan dikirimkan ke email setelah pendaftaran berhasil.</li>
+                            <li>Kompetisi tim (Short Video &amp; UI/UX) cukup didaftarkan oleh satu perwakilan.</li>
+                            <li>Pastikan nomor HP aktif untuk konfirmasi dari panitia.</li>
+                        </ul>
+                        <h3>Butuh Bantuan?</h3>
+                        <p style="font-size:14px;">Hubungi panitia di creativefest@uajy.ac.id.</p>
+                        <div style="margin-top:24px;text-align:center;">
+                            <span style="font-size:12px;text-transform:uppercase;letter-spacing:1px;color:var(--paper);opacity:0.7;">Total Pendaftar</span>
+                            <div id="liveCounter">&#8211;</div>
+                        </div>
+
+                    <!-- countdown timer -->
+                        <div class="countdown countdown-compact" data-deadline="2026-09-09T23:59:59+07:00">
+                            <span class="countdown-label">Sisa Waktu Pendaftaran</span>
+                            <div class="countdown-timer">
+                                <div class="countdown-unit">
+                                    <span class="value cd-days">00</span>
+                                    <span class="unit-label">Hari</span>
+                                </div>
+                                <div class="countdown-unit">
+                                    <span class="value cd-hours">00</span>
+                                    <span class="unit-label">Jam</span>
+                                </div>
+                                <div class="countdown-unit">
+                                    <span class="value cd-minutes">00</span>
+                                    <span class="unit-label">Menit</span>
+                                </div>
+                                <div class="countdown-unit">
+                                    <span class="value cd-seconds">00</span>
+                                    <span class="unit-label">Detik</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- footer -->
+        <footer class="site-footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div>
+                        <h4>UAJY Creative Fest 2026</h4>
+                        <p>Universitas Atma Jaya Yogyakarta<br />Jl. Babarsari No.43, Janti, Caturtunggal, Kec. Depok, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55281</p>
+                    </div>
+                    <div>
+                        <h4>Navigasi</h4>
+                        <ul>
+                            <li><a href="index.xhtml">Beranda</a></li>
+                            <li><a href="schedule.xhtml">Jadwal</a></li>
+                            <li><a href="registration.xhtml">Pendaftaran</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Kontak</h4>
+                        <ul>
+                            <li>creativefest@uajy.ac.id</li>
+                            <li>+62 812 7977 6676</li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="footer-bottom">&#169; 2026 UAJY Creative Fest.  Celebrating creativity, collaboration, and innovation.</p>
+            </div>
+        </footer>
+
+        <button type="button" id="backToTop" class="back-to-top" aria-label="Kembali ke atas">&#8593;</button>
+
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
+    </body>
+</html>
